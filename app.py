@@ -17,6 +17,10 @@ def index():
     recipes=mongo.db.recipes.find()
     return render_template("index.html", recipes=recipes)
 
+@app.route('/saltimbocca')
+def saltimbocca():
+    return render_template("saltimbocca.html")
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
