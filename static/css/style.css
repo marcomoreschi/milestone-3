@@ -16,7 +16,11 @@ a {
     text-decoration: none;
 }
 
+#homepage {
+    border-radius: 20%;
+}
 
+   
 /*Fonts*/
 
 .title-font {

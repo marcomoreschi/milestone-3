@@ -38,12 +38,21 @@
         </nav>
     </header>
 
+<!--Block content:-->
+<!--Div for the block content extended from other pages.-->
+    <main>
+        <div class="container">
+            {% block content %} {% endblock %}
+
+        </div>
+    </main>
+
+
     <footer class="page-footer  light-blue lighten-2">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12">
                     <h5 class="white-text title-font">Site by Marco Moreschi:</h5>
-                    <p class="standard-font">To see more of his work, click on the GitHub icon.</p>
                     <p class="standard-font">© 2020 Copyright Marco Moreschi</p>
                 </div>
                 <div class="col l4 offset-l2 s12">
