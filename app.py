@@ -9,9 +9,14 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-z4c90.mong
 
 mongo =PyMongo(app)
 
+#-------------------#Home Page
+
 @app.route('/')
-def hello():
-    return 'hello'
+@app.route('/index')
+def index():
+    recipes=mongo.db.recipes.find()
+    return render_template("index.html", recipes=recipes)
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
