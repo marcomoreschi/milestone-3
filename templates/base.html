@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MarcoCook</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css" />
+
+</head>
+<body>
+
+    <footer class="page-footer  light-blue lighten-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text title-font">Site by Marco Moreschi:</h5>
+                    <p class="standard-font">To see more of his work, click on the GitHub icon.</p>
+                    <p class="standard-font">© 2020 Copyright Marco Moreschi</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text title-font">My Github:</h5>
+                    <a href="https://github.com/marcomoreschi"><i class="fab fa-github fa-2x white-text"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!--Javascript/JQuery content:-->
+<!--Linked Javascript content and JQuery functions from Materialize.-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+            $(".button-collapse").sideNav();
+            $(".dropdown-button").dropdown({ hover: true });
+            $('.modal').modal();
+            $('.parallax').parallax();
+            $('.carousel').carousel();
+        });
+    </script>
+
+</body>
+
+</html>

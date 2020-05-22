@@ -1,0 +1,40 @@
+/*Google Fonts Import*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Dancing+Script&display=swap');
+
+/*Element styling*/
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*Fonts*/
+
+.title-font {
+    font-family: 'Dancing Script', cursive;
+}
+
+.standard-font {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/*Height for Parallax Container*/
+.parallax-container {
+    height: 400px;
+    margin-top: 10px;
+    }
+ 
+/*Height for Carousel*/    
+.carousel {
+    height: 360px;
+}
