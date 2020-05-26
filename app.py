@@ -21,6 +21,13 @@ def index():
 def saltimbocca():
     return render_template("saltimbocca.html")
 
+@app.route('/pastaallanorma')
+def pastaallanorma():
+    return render_template("pastaallanorma.html")
+
+
+
+
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
