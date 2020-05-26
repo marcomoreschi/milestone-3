@@ -25,7 +25,9 @@ def saltimbocca():
 def pastaallanorma():
     return render_template("pastaallanorma.html")
 
-
+@app.route('/fishandchips')
+def fishandchips():
+    return render_template("fishandchips.html")
 
 
 
