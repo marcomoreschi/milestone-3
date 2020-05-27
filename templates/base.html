@@ -27,7 +27,7 @@
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="{{url_for('index')}}">Home</a></li>
                     <li><a href="#">Find recipes</a></li>
-                    <li><a href="">Add a Recipe</a></li>
+                    <li><a href="{{url_for('add_recipe')}}">Add a Recipe</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="#">Home</a></li>
@@ -75,6 +75,7 @@
             $('.modal').modal();
             $('.parallax').parallax();
             $('.carousel').carousel();
+            $('select').material_select();
         });
     </script>
 
