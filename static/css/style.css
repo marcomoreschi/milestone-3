@@ -42,3 +42,27 @@ a {
 .carousel {
     height: 360px;
 }
+
+#thankspage{ 
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/*Responsive*/
+
+/*if screen width is less than or equal to 767px then*/
+
+@media(max-width: 767px){
+    #thankspage{
+    margin: 0;
+    bottom: -20%;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+    }
+}

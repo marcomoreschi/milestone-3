@@ -34,13 +34,27 @@ def pastaallanorma():
 def fishandchips():
     return render_template("fishandchips.html")
 
+#////////////////////////////////////////////////# Add saltimbocca 
+@app.route('/thanks')
+def thanks():
+    return render_template("thanks.html")
+
 
 #////////////////////////////////////////////////# Add recipe page
 @app.route('/add_recipe')
 def add_recipe():
+    cuisines = mongo.db.cuisine_recipe.find()
+    type_cuisines = mongo.db.type_recipe.find()
     return render_template("addrecipe.html",
-    cuisine=mongo.db.cuisine_recipe.type_recipe.find())
+    cuisines= cuisines, type_cuisines=type_cuisines)
 
+    
+#////////////////////////////////////////////////# Button Add Recipe
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipe = mongo.db.cook_recipe
+    recipe.insert_one(request.form.to_dict())
+    return redirect(url_for('thanks')) 
 
 
 
