@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+        <div class="row">
+                <h2 class="center-align title-font blue-text text-lighten-3">Find a Recipe!</h2>
+                <p class="card-title standard-font" style="font-size: 25px">Enter the recipe name to find a recipe</p> 
+        </div>
+
+        <div class="row">
+                <form action="{{url_for('insert_recipe')}}" method="POST" class="col s12">
+                <div class="row">
+                <h5 class="standard-font" style="font-size: 30px">Recipe Details:</h5>
+                <div class="input-field col s12">
+                <i class="fas fa-heading prefix"></i>
+                <input id="recipe_title" name="recipe_title" type="text" class="validate">
+                <label for="icon_prefix">Recipe Title</label>
+        </div>
+                </div>
+
+        <div class="row">
+            <button class="btn waves-effect waves-light light-blue" type="submit" name="action">Find a Recipe
+                <i class="material-icons right">search</i>
+             </button>
+        </div>
+
+
+
+{% endblock %}

@@ -50,14 +50,17 @@ def add_recipe():
     cuisines= cuisines, type_cuisines=type_cuisines)
 
     
-#////////////////////////////////////////////////# Button Add Recipe
+#////////////////////////////////////////////////# Button Add Recipe and send them to mongoDb
 @app.route('/insert_recipe', methods=['POST'])
 def insert_recipe():
     recipe = mongo.db.cook_recipe
     recipe.insert_one(request.form.to_dict())
     return redirect(url_for('thanks')) 
 
-
+#////////////////////////////////////////////////# Find Recipe 
+@app.route('/findrecipe')
+def findrecipe():
+    return render_template("findrecipe.html")
 
 
 if __name__ == '__main__':
