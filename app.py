@@ -58,9 +58,18 @@ def insert_recipe():
     return redirect(url_for('thanks')) 
 
 #////////////////////////////////////////////////# Find Recipe 
-@app.route('/findrecipe')
-def findrecipe():
-    return render_template("findrecipe.html")
+@app.route('/search_recipe')
+def search_recipe():
+    recipes=mongo.db.recipes.find()
+    return render_template("search_recipe.html", recipes=recipes)
+
+
+@app.route('/search_recipe_title', methods=['POST'])
+def search_recipe_title():
+    recipes=mongo.db.recipes.find()
+    search = request.form.get('search_recipe')
+    recipe_title_search = mongo.db.recipes.find({"recipe_title": {"$regex": f'.*{search_recipe}.*'}})
+    return render_template("search_recipe_title.html", recipes=recipes)
 
 
 if __name__ == '__main__':
