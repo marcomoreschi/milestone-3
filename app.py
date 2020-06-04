@@ -72,11 +72,13 @@ def search_recipe_title():
     return render_template("search_recipe_title.html", recipes=recipe_title_search)
 
 
-@app.route('/recipes')
-def recipes():
-    return render_template("recipes.html")
+@app.route('/the_recipes/<recipe_id>')
+def the_recipes(recipe_id):
+    the_recipes = mongo.db.cook_recipe.find({'_id': ObjectId(recipe_id)})
+    mongo.db.recipes.find({'_id': ObjectId(recipe_id)})
+    return render_template("the_recipes.html", recipe=the_recipes)
 
-
+ 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
