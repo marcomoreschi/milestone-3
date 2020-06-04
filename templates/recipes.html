@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block content%}
+
+{% for recipe in recipes %}
+<div class="parallax-container">
+
+                <div class="parallax">
+                    <img src="{{recipe.image}}"/>
+                </div>
+</div>
+<h3 class="title-font center blue-text text-lighten-3">{{recipe.recipe_title}}</h3>
+<div class="container">
+    <div class="row">
+
+    <div class="grid-example col s12 m6">
+        <div class="divider"></div>
+            <div class="section">
+                <h5 class="card-title standard-font">INGREDIENT</h5>
+                <p class="standard-font">{{recipe.recipe_ingredients}}</p><br>
+            </div>
+        
+    <div class="grid-example col s12 m6">
+        <div class="divider"></div>
+            <div class="section">
+            <ol>
+                <h5 class="card-title standard-font">STEP</h5>
+                <li class="standard-font">{{recipe.recipe_description}}</li><br>
+            </ol>
+        </div> 
+    </div>
+
+</div>
+{% endfor %}
+
+{% endblock %}

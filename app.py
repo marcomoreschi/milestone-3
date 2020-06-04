@@ -72,6 +72,11 @@ def search_recipe_title():
     return render_template("search_recipe_title.html", recipes=recipe_title_search)
 
 
+@app.route('/recipes')
+def recipes():
+    return render_template("recipes.html")
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
