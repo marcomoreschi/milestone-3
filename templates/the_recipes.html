@@ -7,7 +7,11 @@
 <div class="parallax-container">
 
                 <div class="parallax">
+                {% if recipe.image != "" %}
                     <img src="{{recipe.image}}"/>
+                {% else %}
+                    <img src="http://maestroselectronics.com/wp-content/uploads/2017/12/No_Image_Available.jpg">
+                {% endif %}
                 </div>
 </div>
 
@@ -36,7 +40,7 @@
     </div>
 
 <!--Recipe description-->  
-     
+
     <div class="grid-example col s12 m6">
         <div class="divider"></div>
             <div class="section">
