@@ -36,7 +36,7 @@ def pastaallanorma():
 def fishandchips():
     return render_template("fishandchips.html")
 
-#////////////////////////////////////////////////# Add saltimbocca 
+#////////////////////////////////////////////////# Add Thanks page 
 @app.route('/thanks')
 def thanks():
     return render_template("thanks.html")
@@ -45,10 +45,11 @@ def thanks():
 #////////////////////////////////////////////////# Add recipe page
 @app.route('/add_recipe')
 def add_recipe():
+    title = mongo.db.recipe_title.find()
     cuisines = mongo.db.cuisine_recipe.find()
     type_cuisines = mongo.db.type_recipe.find()
     return render_template("addrecipe.html",
-    cuisines= cuisines, type_cuisines=type_cuisines)
+    cuisines= cuisines, type_cuisines=type_cuisines, title=title)
 
     
 #////////////////////////////////////////////////# Button Add Recipe and send them to mongoDb
@@ -67,7 +68,7 @@ def search_recipe():
 
 @app.route('/search_recipe_title', methods=['POST'])
 def search_recipe_title():
-    search = request.form.get('search_recipe_title')
+    search = request.form.get('search_recipe_title').lower()
     print(search)
     recipe_title_search = mongo.db.cook_recipe.find({"recipe_title": {"$regex": f'.*{search}.*'}})
     return render_template("search_recipe_title.html", recipes=recipe_title_search)

@@ -1,16 +1,24 @@
 {% extends 'base.html' %} {% block content%}
 
 {% for recipe in recipe %}
+
+<!--Recipe image--> 
+
 <div class="parallax-container">
 
                 <div class="parallax">
                     <img src="{{recipe.image}}"/>
                 </div>
 </div>
+
+<!--Recipe title--> 
+
 <h3 class="title-font center blue-text text-lighten-3">{{recipe.recipe_title}}</h3>
+
+<!--Recipe ingredients--> 
+
 <div class="container">
     <div class="row">
-
     <div class="grid-example col s12 m6">
         <div class="divider"></div>
             <div class="section">
@@ -21,15 +29,25 @@
                 <li class="standard-font">{{recipe.recipe_ingredients_3.capitalize()}}</li>
                 <li class="standard-font">{{recipe.recipe_ingredients_4.capitalize()}}</li>
                 <li class="standard-font">{{recipe.recipe_ingredients_5.capitalize()}}</li>
+                <li class="standard-font">{{recipe.recipe_ingredients_6.capitalize()}}</li>
+                <li class="standard-font">{{recipe.recipe_ingredients_7.capitalize()}}</li>
+                <li class="standard-font">{{recipe.recipe_ingredients_8.capitalize()}}</li>
             </div>
     </div>
-        
+
+<!--Recipe description-->  
+     
     <div class="grid-example col s12 m6">
         <div class="divider"></div>
             <div class="section">
             <ol>
                 <h5 class="card-title standard-font">STEP</h5>
-                <li class="standard-font">{{recipe.recipe_description}}</li><br>
+                <li class="standard-font">{{recipe.recipe_description.capitalize()}}</li>
+                <li class="standard-font">{{recipe.recipe_description_1.capitalize()}}</li>
+                <li class="standard-font">{{recipe.recipe_description_2.capitalize()}}</li>
+                <li class="standard-font">{{recipe.recipe_description_3.capitalize()}}</li>
+                <li class="standard-font">{{recipe.recipe_description_4.capitalize()}}</li>
+                <li class="standard-font">{{recipe.recipe_description_5.capitalize()}}</li>
             </ol>
         </div> 
     </div>
