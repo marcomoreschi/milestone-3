@@ -41,9 +41,67 @@ Easily add recipes to the app's database:
 
 2- Users searching for recipes:
 
-Easily access recipes based on recipe title
+* Easily access recipes based on recipe title
 
 * Users will be presented with a card for each recipe matching their search criteria. Initially, these just have the title and an image (if provided - if not, they are given a default image stating no image exists for the recipe). On clicking the card, they will then receive a more detailed description of the recipe. This graduated release of information allows users to more easily filter through recipes, only getting more information on recipes which appeal to them.
+
+### Wireframes
+
+These wireframes were created using [Balsamiq](https://balsamiq.com/) during the Scope Plane part of the design and planning process for this project.
+
+[View the wireframes here](https://github.com/marcomoreschi/milestone-3/tree/master/wireframes)
+
+## Features
+
+#### Existing Features
+
+* Parallax: Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling. Here, it is used for the hero image on the home page.
+* Cards: A convenient means of displaying content composed of different types of objects. Here, these are used to section off content in a visually pleasing manner.
+* Dropdown: Used for the "Add a recipe" in the section "Choose Cuisine/type" and part of the navbar, to allow users to select which category they would like to use to search in mobile version.
+* Buttons: Used for specific actions for user interaction.
+* Forms: Used as front-end methods to add and edit recipes on the site.
+* Card Reveal: Used to reveal the recipe description of search results, and also the link to the recipe itself once users have decided that is the recipe they wish to view.
+
+#### Features Left to Implement
+
+* Delete Modal: When users hit the delete button on the recipe page, a modal pops up asking if users are sure they wish to delete the recipe. This allows for a "second chance" in case of accidental clicks of the delete button.
+* For adding a recipe, I have provided users 9 ingredient slots (which I felt was a sufficient number for the purposes of the project). In future, I would like to incorporate a means of allowing users to add additional ingredient slots to the form so as not to restrict them in this way.
+
+## Technologies Used
+
+#### HTML
+
+The project uses [HTML](https://en.wikipedia.org/wiki/HTML) to structure the site.
+
+#### CSS
+
+The project uses [CSS](https://it.wikipedia.org/wiki/CSS) to style the site.
+
+#### Javascript
+
+The project uses [Javascript](https://en.wikipedia.org/wiki/JavaScript), in particular JQuery, for interactive elements on various pages.
+
+#### Materialize
+
+The project uses [Materialize](https://materializecss.com/) to aid in both the styling (Materialize CSS, Components and Javascript) and structure (Grid System) of the site, as well as aiding to create a responsive design (also through the Grid System).
+
+#### FontAwesome
+
+The project uses [FontAwesome icons](https://fontawesome.com/v4.7.0/) on various pages of the app.
+
+#### Python
+
+The project uses [Python](https://www.python.org/) for logic elements of the project.
+
+#### Flask
+
+The project uses the [Flask Framework](https://en.wikipedia.org/wiki/Flask_(web_framework)).
+
+#### MongoDB
+
+The project uses [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) as a non-relational database for the project's data.
+
+
 
 ## Manual Testing
 
