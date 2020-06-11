@@ -102,7 +102,6 @@ The project uses the [Flask Framework](https://en.wikipedia.org/wiki/Flask_(web_
 The project uses [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) as a non-relational database for the project's data.
 
 
-
 ## Manual Testing
 
 ### Tests taken on Desktop
@@ -118,8 +117,43 @@ All steps on desktop were repeated in browsers: Firefox, Chrome and Safari and M
 
 2. Information Section
 * Hovered back and forth over the information boxes slowly, then quickly to test animate
-* Hovered over the tooltip on the underlined piece of text
-* Clicked on tooltip to see what would happen
+* Clicked on the buttons to see what would happen
 * Scrolled up and down to see how this was working and also to see how quickly I could find the next call to action button and/or scroll down to this next section
 * Clicked on the next call to action button, testing again the scroll behaviour and where the button will redirect me
-* Scrolled back up to test that this was working
+
+
+## Deployment
+
+I created a repository on GitHub, linking my project on Cloud9 to it. I committed and pushed content to this repository at various stages of the project (e.g. when I had a section fully structured and styled, or when I had coded a certain function to function in the desired manner).
+
+I then created the app on Heroku, created a requirements.txt file (with the project's required applications) and a Procfile (specifying the app is a Python web app).
+
+I then pushed to Heroku. Having done this, I then specified the IP and PORT.
+
+I pushed to heroku whenever I pushed to Github. This was incredibly useful in testing the site, as outlined above, especially in testing it on various screen sizes.
+
+## Credits
+
+#### Content
+
+* All text in this project was written by the developer.
+
+### Media
+
+#### Images
+
+* The images used for the recipes were obtained from Google Images and are used for educational purposes only. 
+
+#### Recipe
+
+* All recipes were taken from Gino D'Acampo and i have added some changed.
+
+## Acknowledgements
+
+I have taken inspiration from different website that I have found online. My mentor, online student support and Slack were both great help throughout my project.
+
+##### Disclaimer
+
+* The content of this website, including the images used, are for educational purposes only.
+
+
