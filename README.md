@@ -13,17 +13,6 @@ This app has two primary parties involved – users who want to add recipes to t
 * We want to be able to easily access recipes based on the recipe title.
 * We want the recipe to be clear and concisely presented, in an easily understandable format.
 
-
-## Code Validation Testing
-
-To initially test the website I used the following validators:
-
-[W3C Markup Validation](https://validator.w3.org/) Service for HTML I inserted the code into the validator via direct input. I consistently checked used this throughut previous checks, where any errors/warnings were addressed directly and documented in commits. Upon a final check no erros/warnings were present.
-
-[W3C CSS Validation](https://jigsaw.w3.org/css-validator/) Service for CSS I inserted the code into the validator via direct input. No errors were were found upon final check.
-
-[JSHint](https://jshint.com/) for Javascript I inserted the code into the validator via direct input. 
-
 ## User Stories 
 
 1- Users adding recipes:
@@ -102,25 +91,57 @@ The project uses the [Flask Framework](https://en.wikipedia.org/wiki/Flask_(web_
 The project uses [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) as a non-relational database for the project's data.
 
 
-## Manual Testing
+## Testing
 
 ### Tests taken on Desktop
 
 All steps on desktop were repeated in browsers: Firefox, Chrome and Safari and Microsoft Edge.
 
 1. Hero Header/Landing section on website
-* Opened up the page in the browser
-* Refreshed the page immediately
-* Closed the page and then opened the website again in a new tab and in a new browser window
-* Scrolled back up to test if I could still go back up and scrolled down
-* Clicked the back button, where it returned me to the landing section view again
+* Opened up the page in the browser.
+* Refreshed the page immediately.
+* Closed the page and then opened the website again in a new tab and in a new browser window.
+* Scrolled back up to test if I could still go back up and scrolled down.
+* Clicked the back button, where it returned me to the landing section view again.
 
-2. Information Section
-* Hovered back and forth over the information boxes slowly, then quickly to test animate
-* Clicked on the buttons to see what would happen
-* Scrolled up and down to see how this was working and also to see how quickly I could find the next call to action button and/or scroll down to this next section
-* Clicked on the next call to action button, testing again the scroll behaviour and where the button will redirect me
+2. Recipe Section
+* Hovered back and forth over the recipe button slowly, then quickly to test animate.
+* Clicked on the buttons to see what would happen.
+* Scrolled up and down to see how this was working.
+* Clicked on the next call to action button, testing again the scroll behaviour and where the button will redirect me.
 
+#### Users adding recipes:
+
+* Go to the add recipe page (either through the navbar link or by the add recipe card on home page).
+
+* Insert random values into the form elements and click the "Add Recipe" button at the bottom of the page.
+
+* Users will see that they have added a recipe with a thank you message and link back to the site's home page.
+
+* Search for the recipe using one of the categories to see if it was added.
+
+* Can visually confirm that this works. As the site developer, I can see that this has been added to the database on MongoDB Atlas.
+
+#### Users searching for recipes:
+
+* Search for a recipe (you can search the 3 recipes in the home page as a test).
+* Users will be presented with a card for each recipe matching their search criteria. On clicking the card, they will then receive a more detailed description of the recipe.
+
+## Code Validation Testing
+
+To initially test the website I used the following validators:
+
+[W3C Markup Validation](https://validator.w3.org/) Service for HTML I inserted the code into the validator via direct input. I consistently checked used this throughut previous checks, where any errors/warnings were addressed directly and documented in commits. Upon a final check no erros/warnings were present.
+
+[W3C CSS Validation](https://jigsaw.w3.org/css-validator/) Service for CSS I inserted the code into the validator via direct input. No errors were were found upon final check.
+
+[JSHint](https://jshint.com/) for Javascript I inserted the code into the validator via direct input. 
+
+### Responsiveness of site:
+
+* To aid in creating a responsive site, I used Materialize’s Grid System. Through the creating process of this app, I would check the various break points to see if the column sizes worked with the design on various device screen sizes, using Chrome Dev Tools, my own iPhone 8 and an iPad Pro.
+* Navbar: For mobile views for the project, users will see that the full desktop navbar is reduced to just the logo and a burger button, which activates the side nav containing the navbar elements.
+* Sections: The Grid System aided me greatly in arranging the sections for each page. As I was creating each section, and the elements in each (e.g. cards, images, text, etc.), I experimented with various column sizes for each breakpoint to get an appealing layout appropriate to the screen size it is being viewed on.
 
 ## Deployment
 
