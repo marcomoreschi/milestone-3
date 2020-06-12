@@ -15,26 +15,8 @@ mongo =PyMongo(app)
 @app.route('/')
 @app.route('/index')
 def index():
-    recipes=mongo.db.recipes.find()
+    recipes=mongo.db.cook_recipe.find().limit(3)
     return render_template("index.html", recipes=recipes)
-
-
-#////////////////////////////////////////////////# Add saltimbocca 
-@app.route('/saltimbocca')
-def saltimbocca():
-    return render_template("saltimbocca.html")
-
-
-#////////////////////////////////////////////////# Add pasta alla norma
-@app.route('/pastaallanorma')
-def pastaallanorma():
-    return render_template("pastaallanorma.html")
-
-
-#////////////////////////////////////////////////# Add fish and chips
-@app.route('/fishandchips')
-def fishandchips():
-    return render_template("fishandchips.html")
 
 #////////////////////////////////////////////////# Add Thanks page 
 @app.route('/thanks')

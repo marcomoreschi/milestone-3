@@ -7,53 +7,32 @@
 
 <!--recipes:-->
 <div class="row">
-    <h3 class="title-font center blue-text text-lighten-3">Recipes:</h3>
-    <div class="col s12 l4">
+<h3 class="title-font center blue-text text-lighten-3">Recipes:</h3>
+{% for recipe in recipes %}
+     <div class="col s12 l4">
         <div class="card medium">
             <div class="card-image">
-              <img src="https://www.fortheloveofcooking.net/wp-content/uploads/2011/08/DSC_6218-1.jpg">
+            {% if recipe.image != "" %}
+                    <img src="{{recipe.image}}"/>
+                {% else %}
+                    <img src="http://maestroselectronics.com/wp-content/uploads/2017/12/No_Image_Available.jpg">
+                {% endif %}
             </div>
             <div class="card-content">
-                <span class="card-title standard-font">Saltimbocca</span>
+                <span class="card-title standard-font">{{recipe.recipe_title}}</span>
                 <p class="standard-font">Click below to find the recipe.</p>
             </div>
             <div>
-              <a href="{{url_for('saltimbocca')}}" class="waves-effect waves-light btn blue lighten-3 hoverable col s8 offset-s2 title-font white-text">RECIPE</a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="col s12 l4">
-        <div class="card medium">
-            <div class="card-image">
-              <img src="http://i.ytimg.com/vi/EyCrpvMpb6I/maxresdefault.jpg">
-            </div>
-            <div class="card-content">
-                <span class="card-title standard-font">Pasta alla norma</span>
-                <p class="standard-font">Click below to find the recipe.</p>
-            </div>
-            <div>
-              <a href="{{url_for('pastaallanorma')}}" class="waves-effect waves-light btn blue lighten-3 hoverable col s8 offset-s2 title-font white-text">RECIPE</a>
+              <a href="{{url_for('the_recipes', recipe_id=recipe._id)}}" class="waves-effect waves-light btn blue lighten-3 hoverable col s8 offset-s2 title-font white-text">RECIPE</a>
             </div>
         </div>
     </div>
 
-    
-<div class="col s12 l4">
-        <div class="card medium">
-            <div class="card-image">
-              <img src="https://media.timeout.com/images/103696693/image.jpg">
-            </div>
-            <div class="card-content">
-                <span class="card-title standard-font">Fish & Chips</span>
-                <p class="standard-font">Click below to find the recipe.</p>
-            </div>
-            <div>
-              <a href="{{url_for('fishandchips')}}" class="waves-effect waves-light btn blue lighten-3 hoverable col s8 offset-s2 title-font white-text">RECIPE</a>
-            </div>
-        </div>
-    </div>
+{% endfor %}
 </div>
+    
+    
+
 
 
 <!--Main action cards:-->
