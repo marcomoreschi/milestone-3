@@ -1,33 +1,30 @@
-{% extends 'base.html' %} {% block content%}
+{% extends 'base.html' %} {% block content%} {% for recipe in recipe %}
 
-{% for recipe in recipe %}
-
-<!--Recipe image--> 
+<!--Recipe image-->
 
 <div class="parallax-container">
-
-                <div class="parallax">
-                {% if recipe.image != "" %}
-                    <img src="{{recipe.image}}"/>
-                {% else %}
-                    <img src="http://maestroselectronics.com/wp-content/uploads/2017/12/No_Image_Available.jpg">
-                {% endif %}
-                </div>
+    <div class="parallax">
+        {% if recipe.image != "" %}
+        <img src="{{recipe.image}}" />
+        {% else %}
+        <img src="http://maestroselectronics.com/wp-content/uploads/2017/12/No_Image_Available.jpg" />
+        {% endif %}
+    </div>
 </div>
 
-<!--Recipe title--> 
+<!--Recipe title-->
 
 <h3 class="title-font center blue-text text-lighten-3">{{recipe.recipe_title}}</h3>
 
-<!--Recipe ingredients--> 
+<!--Recipe ingredients-->
 
 <div class="container">
     <div class="row">
-    <div class="grid-example col s12 m6">
-        <div class="divider"></div>
+        <div class="grid-example col s12 m6">
+            <div class="divider"></div>
             <div class="section">
                 <h5 class="card-title standard-font">INGREDIENT</h5>
-            <li class="standard-font">{{recipe.recipe_ingredients.capitalize()}}</li>
+                <li class="standard-font">{{recipe.recipe_ingredients.capitalize()}}</li>
                 <li class="standard-font">{{recipe.recipe_ingredients_1.capitalize()}}</li>
                 <li class="standard-font">{{recipe.recipe_ingredients_2.capitalize()}}</li>
                 <li class="standard-font">{{recipe.recipe_ingredients_3.capitalize()}}</li>
@@ -37,27 +34,24 @@
                 <li class="standard-font">{{recipe.recipe_ingredients_7.capitalize()}}</li>
                 <li class="standard-font">{{recipe.recipe_ingredients_8.capitalize()}}</li>
             </div>
+        </div>
 
-    </div>
+        <!--Recipe description-->
 
-<!--Recipe description-->  
-
-    <div class="grid-example col s12 m6">
-        <div class="divider"></div>
+        <div class="grid-example col s12 m6">
+            <div class="divider"></div>
             <div class="section">
-            <ol>
-                <h5 class="card-title standard-font">STEP</h5>
-                <li class="standard-font">{{recipe.recipe_description.capitalize()}}</li>
-                <li class="standard-font">{{recipe.recipe_description_1.capitalize()}}</li>
-                <li class="standard-font">{{recipe.recipe_description_2.capitalize()}}</li>
-                <li class="standard-font">{{recipe.recipe_description_3.capitalize()}}</li>
-                <li class="standard-font">{{recipe.recipe_description_4.capitalize()}}</li>
-                <li class="standard-font">{{recipe.recipe_description_5.capitalize()}}</li>
-            </ol>
-        </div> 
+                <ol>
+                    <h5 class="card-title standard-font">STEP</h5>
+                    <li class="standard-font">{{recipe.recipe_description.capitalize()}}</li>
+                    <li class="standard-font">{{recipe.recipe_description_1.capitalize()}}</li>
+                    <li class="standard-font">{{recipe.recipe_description_2.capitalize()}}</li>
+                    <li class="standard-font">{{recipe.recipe_description_3.capitalize()}}</li>
+                    <li class="standard-font">{{recipe.recipe_description_4.capitalize()}}</li>
+                    <li class="standard-font">{{recipe.recipe_description_5.capitalize()}}</li>
+                </ol>
+            </div>
+        </div>
     </div>
-
+    {% endfor %} {% endblock %}
 </div>
-{% endfor %}
-
-{% endblock %}

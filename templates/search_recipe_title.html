@@ -1,6 +1,4 @@
-{% extends 'base.html'%}
-
-{% block content %}
+{% extends 'base.html'%} {% block content %}
 
 <div class="row">
     <h2 class="center-align title-font center blue-text text-lighten-3">Search results!</h2>
@@ -8,14 +6,14 @@
 </div>
 
 <div class="row">
-{% for recipe in recipes %}
-     <div class="col s12 l4">
+    {% for recipe in recipes %}
+    <div class="col s12 l4">
         <div class="card medium">
             <div class="card-image">
-            {% if recipe.image != "" %}
-                    <img src="{{recipe.image}}"/>
+                {% if recipe.image != "" %}
+                <img src="{{recipe.image}}" />
                 {% else %}
-                    <img src="http://maestroselectronics.com/wp-content/uploads/2017/12/No_Image_Available.jpg">
+                <img src="http://maestroselectronics.com/wp-content/uploads/2017/12/No_Image_Available.jpg" />
                 {% endif %}
             </div>
             <div class="card-content">
@@ -23,12 +21,12 @@
                 <p class="standard-font">Click below to find the recipe.</p>
             </div>
             <div>
-              <a href="{{url_for('the_recipes', recipe_id=recipe._id)}}" class="waves-effect waves-light btn blue lighten-3 hoverable col s8 offset-s2 title-font white-text">RECIPE</a>
+                <a href="{{url_for('the_recipes', recipe_id=recipe._id)}}" class="waves-effect waves-light btn blue lighten-3 hoverable col s8 offset-s2 title-font white-text">RECIPE</a>
             </div>
         </div>
     </div>
 
-{% endfor %}
+    {% endfor %}
 </div>
 
 {% endblock %}

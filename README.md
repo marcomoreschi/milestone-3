@@ -139,7 +139,7 @@ To initially test the website I used the following validators:
 
 ### Responsiveness of site:
 
-* To aid in creating a responsive site, I used Materialize’s Grid System. Through the creating process of this app, I would check the various break points to see if the column sizes worked with the design on various device screen sizes, using Chrome Dev Tools, my own iPhone 8 and an iPad Pro.
+* To aid in creating a responsive site, I used Materialize’s Grid System. Through the creating process of this app, I would check the various break points to see if the column sizes worked with the design on various device screen sizes, using Chrome Dev Tools, my own Samsung Galaxy s10plus and an iPad Pro.
 * Navbar: For mobile views for the project, users will see that the full desktop navbar is reduced to just the logo and a burger button, which activates the side nav containing the navbar elements.
 * Sections: The Grid System aided me greatly in arranging the sections for each page. As I was creating each section, and the elements in each (e.g. cards, images, text, etc.), I experimented with various column sizes for each breakpoint to get an appealing layout appropriate to the screen size it is being viewed on.
 
